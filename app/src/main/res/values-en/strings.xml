@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password_hint">Password</string>
+    <string name="WelcomeText">Login to the app</string>
+    <string name="loginButtonText">Login</string>
+    <string name="login_hint">Login</string>
+    <string name="coperight">Developer: Sukhonosov Egor, RIBO-03-23</string>
+    <string name="internetCheck">Check your internet connection</string>
+    <string name="errorOcurred">"The error has occurred: "</string>
+    <string name="emptyFields">Please enter login and password</string>
+    <string name="taskLabel">"Task: "</string>
+    <string name="toMainProgram">To the main program</string>
+    <string name="selectIpLabel">Enter IP address</string>
+    <string name="ipaddress">IP Address</string>
+    <string name="useThisIpString">Use IP of this device</string>
+    <string name="getInfoString">Get Info</string>
+    <string name="cannotReadIp">Cannot read external IP, check your internet connection</string>
+    <string name="weirdAnswer">Weird answer received</string>
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <!-- code strings -->
+    <string name="group" translatable="false">RIBO-03-23</string>
+    <string name="taskAddress" translatable="false">"http://android-for-students.ru/coursework/login.php"</string>
+    <string name="getMyIpAddress" translatable="false">Whois</string>
+
+    <!-- ui text -->
+    <string name="app_name" translatable="false">Whois</string>
+    <string name="login_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
+    <string name="WelcomeText">Вход в приложение</string>
+    <string name="loginButtonText">Вход</string>
+    <string name="coperight">Разработчик: Сухоносов Егор, РИБО-03-23</string>
+    <string name="internetCheck">Проверьте своё соединение с интернетом</string>
+    <string name="errorOcurred">"Произошла ошибка: "</string>
+    <string name="emptyFields">Введите логин и пароль</string>
+    <string name="taskLabel">"Задание: "</string>
+    <string name="toMainProgram">Перейти к основной программе</string>
+    <string name="selectIpLabel">Введите IP адрес</string>
+    <string name="ipaddress">IP Адрес</string>
+    <string name="useThisIpString">Использовать IP данного устройства</string>
+    <string name="getInfoString">Получить информацию</string>
+    <string name="cannotReadIp">Невозможно прочитать внешний IP адрес, проверьте подключение к интернету</string>
+    <string name="weirdAnswer">Получен неожиданный ответ</string>
+
+</resources>
