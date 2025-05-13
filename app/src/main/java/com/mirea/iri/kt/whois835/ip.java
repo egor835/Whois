@@ -3,6 +3,7 @@ package com.mirea.iri.kt.whois835;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 
@@ -19,11 +20,13 @@ public class ip extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.ipFragmentContainer, new ipReqFragment())
                 .commit();
+
     }
 
     public void useDevIp(View view) {
         Switch ipSwitch = findViewById(R.id.useThisIp);
         EditText ipInput = findViewById(R.id.ipTextBox);
+        Button getInfoBtn = findViewById(R.id.getInfoButton);
         if (ipSwitch.isChecked()) {
             GetIpAddrRunnable getip = new GetIpAddrRunnable();
             Thread th = new Thread(getip);
@@ -40,6 +43,7 @@ public class ip extends AppCompatActivity {
                 } else {
                     ipInput.setText(outp);
                     ipInput.setEnabled(false);
+                    ipInput.setError(null);
                 }
             }
         } else {

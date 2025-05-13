@@ -22,5 +22,6 @@
     <string name="getInfoString">Получить информацию</string>
     <string name="cannotReadIp">Невозможно прочитать внешний IP адрес, проверьте подключение к интернету</string>
     <string name="weirdAnswer">Получен неожиданный ответ</string>
+    <string name="notAValidIpErr">Введён некорректный IP адрес</string>
 
 </resources>

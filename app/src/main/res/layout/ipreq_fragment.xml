@@ -37,11 +37,12 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/getInfoButton"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:enabled="false"
         android:fontFamily="@font/moscowsansregular"
         android:text="@string/getInfoString"
         app:layout_constraintStart_toStartOf="parent"

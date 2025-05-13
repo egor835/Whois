@@ -16,4 +16,5 @@
     <string name="getInfoString">Get Info</string>
     <string name="cannotReadIp">Cannot read external IP, check your internet connection</string>
     <string name="weirdAnswer">Weird answer received</string>
+    <string name="notAValidIpErr">This is not a valid IP</string>
 </resources>
