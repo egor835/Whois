@@ -40,15 +40,15 @@ public class MainActivity extends AppCompatActivity {
             map.put("lgn", lgn);
             map.put("pwd", pwd);
             map.put("g", getString(R.string.group));
-            HTTPRunnable httpRunnable = new HTTPRunnable(getString(R.string.taskAddress), map);
-            Thread th = new Thread(httpRunnable);
+            POSTRunnable POSTRunnable = new POSTRunnable(getString(R.string.taskAddress), map);
+            Thread th = new Thread(POSTRunnable);
             th.start();
             try {
                 th.join();
             } catch (Exception ex) {
                 Log.e("WhoIs", ex.getMessage());
             } finally {
-                var outp = httpRunnable.getResponseBody();
+                var outp = POSTRunnable.getResponseBody();
                 if (outp != null && !outp.trim().isEmpty()) {
                     JSONObject jsobj = new JSONObject(outp);
                     int result = jsobj.getInt("result_code");

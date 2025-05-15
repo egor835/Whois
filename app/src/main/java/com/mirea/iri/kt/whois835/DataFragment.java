@@ -30,7 +30,7 @@ public class DataFragment extends Fragment {
         }
 
         TextView txt = view.findViewById(R.id.taskBody);
-        TextView label = view.findViewById(R.id.taskLabel);
+        TextView label = view.findViewById(R.id.tabsLabel);
         label.setText(getString(R.string.taskLabel) + title + ", " + variant);
         txt.setText(task);
         txt.setMovementMethod(new ScrollingMovementMethod());
