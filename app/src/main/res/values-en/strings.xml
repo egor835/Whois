@@ -18,4 +18,6 @@
     <string name="weirdAnswer">Weird answer received</string>
     <string name="notAValidIpErr">This is not a valid IP</string>
     <string name="tabsLabel">Info about IP</string>
+    <string name="errorTranslateJSLabel">Unknown Error Occured</string>
+    <string name="errorTranslateJSBody">More info in Logcat</string>
 </resources>

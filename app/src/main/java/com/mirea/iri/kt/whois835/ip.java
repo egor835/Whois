@@ -2,7 +2,9 @@ package com.mirea.iri.kt.whois835;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +28,7 @@ public class ip extends AppCompatActivity {
         tabsFragment.setArguments(bundle);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.ipFragmentContainer, tabsFragment)
+                .addToBackStack(null)
                 .commit();
     }
 }

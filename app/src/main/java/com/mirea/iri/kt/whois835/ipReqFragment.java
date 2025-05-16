@@ -17,7 +17,7 @@ import android.widget.Switch;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class                  ipReqFragment extends Fragment {
+public class ipReqFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class                  ipReqFragment extends Fragment {
         EditText ipInput = view.findViewById(R.id.ipTextBox);
         Button getInfoBtn = view.findViewById(R.id.getInfoButton);
         Switch ipSwitch = view.findViewById(R.id.useThisIp);
+        ipInput.setEnabled(!ipSwitch.isChecked());
         TextWatcher watcher = new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {

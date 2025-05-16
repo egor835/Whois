@@ -2,6 +2,8 @@
     <!-- non-ui internal code strings -->
     <string name="group" translatable="false">RIBO-03-23</string>
     <string name="taskAddress" translatable="false">"http://android-for-students.ru/coursework/login.php"</string>
+    <string name="ipbaseApi" translatable="false"></string>
+    <string name="ipinfoApi" translatable="false"></string>
 
     <!-- ui text -->
     <string name="app_name" translatable="false">Whois</string>
@@ -23,4 +25,7 @@
     <string name="weirdAnswer">Получен неожиданный ответ</string>
     <string name="notAValidIpErr">Введён некорректный IP адрес</string>
     <string name="tabsLabel">Информация о IP адресе</string>
+    <string name="errorTranslateJSLabel">Возникла неизвестная ошибка</string>
+    <string name="errorTranslateJSBody">Подробнее в Logcat</string>
+
 </resources>

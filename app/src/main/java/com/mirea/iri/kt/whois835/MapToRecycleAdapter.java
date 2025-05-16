@@ -1,5 +1,9 @@
 package com.mirea.iri.kt.whois835;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +16,17 @@ import java.util.LinkedHashMap;
 public class MapToRecycleAdapter extends RecyclerView.Adapter<MapToRecycleAdapter.ViewHolder> {
 
     private final LinkedHashMap<String, String> map;
+    private Context context;
 
-    public MapToRecycleAdapter(LinkedHashMap<String, String> map) {
+    public MapToRecycleAdapter(LinkedHashMap<String, String> map, Context context) {
         this.map = map;
+        this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(android.R.layout.simple_list_item_2, parent, false);
+                .inflate(R.layout.single_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -29,6 +35,23 @@ public class MapToRecycleAdapter extends RecyclerView.Adapter<MapToRecycleAdapte
         LinkedHashMap.Entry<String, String> entry = (LinkedHashMap.Entry<String, String>) map.entrySet().toArray()[position];
         holder.keyText.setText(entry.getKey());
         holder.valueText.setText(entry.getValue());
+        if (entry.getKey().trim().equals("exact_location")) {
+            holder.valueText.setClickable(true);
+            holder.valueText.setFocusable(true);
+            holder.valueText.setTextColor(Color.parseColor("#0000ff"));
+            View.OnClickListener goToMaps = v -> {
+                Intent intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("geo:"+entry.getValue()));
+                context.startActivity(intent);
+            };
+            holder.valueText.setOnClickListener(goToMaps);
+        } else {
+            //goofy aah patch
+            holder.valueText.setClickable(false);
+            holder.valueText.setFocusable(false);
+            holder.valueText.setTextColor(Color.parseColor("#000000"));
+            holder.valueText.setOnClickListener(null);
+        }
     }
 
     @Override
@@ -42,8 +65,8 @@ public class MapToRecycleAdapter extends RecyclerView.Adapter<MapToRecycleAdapte
 
         public ViewHolder(View view) {
             super(view);
-            keyText = view.findViewById(android.R.id.text1);
-            valueText = view.findViewById(android.R.id.text2);
+            keyText = view.findViewById(R.id.itemLabel);
+            valueText = view.findViewById(R.id.itemValue);
         }
     }
 }
