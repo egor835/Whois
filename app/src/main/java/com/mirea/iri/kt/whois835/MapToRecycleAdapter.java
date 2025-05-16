@@ -39,10 +39,12 @@ public class MapToRecycleAdapter extends RecyclerView.Adapter<MapToRecycleAdapte
             holder.valueText.setClickable(true);
             holder.valueText.setFocusable(true);
             holder.valueText.setTextColor(Color.parseColor("#0000ff"));
-            View.OnClickListener goToMaps = v -> {
-                Intent intent = new Intent(Intent.ACTION_VIEW,
+            View.OnClickListener goToMaps = new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("geo:"+entry.getValue()));
-                context.startActivity(intent);
+                    context.startActivity(intent);
+                }
             };
             holder.valueText.setOnClickListener(goToMaps);
         } else {

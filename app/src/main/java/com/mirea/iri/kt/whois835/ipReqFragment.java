@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
 
 public class ipReqFragment extends Fragment {
     @Override
@@ -66,7 +66,7 @@ public class ipReqFragment extends Fragment {
                         var outp = getip.getAddress();
                         if (outp.trim().isEmpty()){
                             ipSwitch.setChecked(false);
-                            Snackbar.make(view, R.string.cannotReadIp, Snackbar.LENGTH_LONG).show();
+                            Toast.makeText(view.getContext(), getString(R.string.cannotReadIp), Toast.LENGTH_LONG).show();
                         } else {
                             ipInput.setText(outp);
                             ipInput.setEnabled(false);

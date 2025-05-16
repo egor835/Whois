@@ -6,10 +6,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.snackbar.Snackbar;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         var lgn = loginInput.getText().toString();
         var pwd = passwdInput.getText().toString();
         if (lgn.trim().isEmpty() || pwd.trim().isEmpty()) {
-            Snackbar.make(view, getString(R.string.emptyFields), Snackbar.LENGTH_LONG).show();
+            Toast.makeText(view.getContext(), getString(R.string.emptyFields), Toast.LENGTH_LONG).show();
         } else {
             Button loginButton = findViewById(R.id.loginButton);
             loginButton.setEnabled(false);
@@ -66,16 +66,16 @@ public class MainActivity extends AppCompatActivity {
                                     .commit();
                             break;
                         case -1:
-                            Snackbar.make(view, getString(R.string.errorOcurred) + jsobj.getString("error"), Snackbar.LENGTH_LONG).show();
+                            Toast.makeText(view.getContext(), getString(R.string.errorOcurred), Toast.LENGTH_LONG).show();
                             Log.e("WhoIs", jsobj.getString("error"));
                             break;
                         default:
-                            Snackbar.make(view, getString(R.string.weirdAnswer), Snackbar.LENGTH_LONG).show();
+                            Toast.makeText(view.getContext(), getString(R.string.weirdAnswer), Toast.LENGTH_LONG).show();
                             Log.e("WhoIs", getString(R.string.weirdAnswer));
                             break;
                     }
                 } else {
-                    Snackbar.make(view, getString(R.string.internetCheck), Snackbar.LENGTH_LONG).show();
+                    Toast.makeText(view.getContext(), getString(R.string.internetCheck), Toast.LENGTH_LONG).show();
                     Log.e("WhoIs", getString(R.string.internetCheck));
                 }
             }
