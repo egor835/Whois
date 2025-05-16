@@ -17,7 +17,7 @@ import android.widget.Switch;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class ipReqFragment extends Fragment {
+public class                  ipReqFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

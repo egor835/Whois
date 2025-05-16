@@ -2,7 +2,6 @@
     <!-- non-ui internal code strings -->
     <string name="group" translatable="false">RIBO-03-23</string>
     <string name="taskAddress" translatable="false">"http://android-for-students.ru/coursework/login.php"</string>
-    <string name="getMyIpAddress" translatable="false">Whois</string>
 
     <!-- ui text -->
     <string name="app_name" translatable="false">Whois</string>
@@ -24,6 +23,4 @@
     <string name="weirdAnswer">Получен неожиданный ответ</string>
     <string name="notAValidIpErr">Введён некорректный IP адрес</string>
     <string name="tabsLabel">Информация о IP адресе</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
