@@ -66,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
                                     .commit();
                             break;
                         case -1:
-                            Toast.makeText(view.getContext(), getString(R.string.errorOcurred), Toast.LENGTH_LONG).show();
+                            Toast.makeText(view.getContext(), getString(R.string.errorOcurred) + jsobj.getString("error"),
+                                    Toast.LENGTH_LONG).show();
                             Log.e("WhoIs", jsobj.getString("error"));
                             break;
                         default:
