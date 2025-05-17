@@ -58,7 +58,7 @@ public class MapToRecycleAdapter extends RecyclerView.Adapter<MapToRecycleAdapte
             //goofy aah patch
             holder.valueText.setClickable(false);
             holder.valueText.setFocusable(false);
-            holder.valueText.setTextColor(Color.parseColor("#000000"));
+            holder.valueText.setTextColor(holder.keyText.getCurrentTextColor());
             holder.valueText.setOnClickListener(null);
         }
     }
