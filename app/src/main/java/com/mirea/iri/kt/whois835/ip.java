@@ -28,7 +28,6 @@ public class ip extends AppCompatActivity {
         tabsFragment.setArguments(bundle);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.ipFragmentContainer, tabsFragment)
-                .addToBackStack(null)
                 .commit();
     }
 }
